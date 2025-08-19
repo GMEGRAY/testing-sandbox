@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableBody = document.querySelector('#data-table tbody');
 
     // URL to the Esri GeoPlatform REST API endpoint
-    const url = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Funding_sources_feature_services_for_RSG/FeatureServer/1/query?where=objectid+%3E+-1&outFields=*&returnGeometry=false&f=json';
+    const url = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Funding_sources_feature_services_for_RSG/FeatureServer';
 
     // Fetch data from the Esri GeoPlatform
     fetch(url)
