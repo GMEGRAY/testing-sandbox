@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableBody = document.querySelector('#data-table tbody');
 
     // URL to the Esri GeoPlatform REST API endpoint
-    const url = 'https://services.arcgis.com/your-service-url/FeatureServer/0/query?where=1%3D1&outFields=*&f=json';
+    const url = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Funding_sources_feature_services_for_RSG/FeatureServer/1/query?where=objectid+%3E+-1&outFields=*&returnGeometry=false&f=json';
 
     // Fetch data from the Esri GeoPlatform
     fetch(url)
@@ -16,15 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Create table cells for each attribute
                 const cell1 = document.createElement('td');
-                cell1.textContent = attributes.Field1; // Replace 'Field1' with actual field name
+                cell1.textContent = attributes.Title; // Replace 'Field1' with actual field name
                 row.appendChild(cell1);
 
                 const cell2 = document.createElement('td');
-                cell2.textContent = attributes.Field2; // Replace 'Field2' with actual field name
+                cell2.textContent = attributes.Description; // Replace 'Field2' with actual field name
                 row.appendChild(cell2);
 
                 const cell3 = document.createElement('td');
-                cell3.textContent = attributes.Field3; // Replace 'Field3' with actual field name
+                cell3.textContent = attributes.Website; // Replace 'Field3' with actual field name
                 row.appendChild(cell3);
 
                 // Append the row to the table body
