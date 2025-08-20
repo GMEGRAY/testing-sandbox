@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.textContent = attributes.Website; // Display the URL text
                 link.target = '_blank'; // Open link in new tab
                 cell3.appendChild(link);
-                //cell3.textContent = attributes.Website; // Replace 'Field3' with actual field name
+                // cell3.textContent = attributes.Website; // Replace 'Field3' with actual field name
                 row.appendChild(cell3);
 
                 // Append the row to the table body
