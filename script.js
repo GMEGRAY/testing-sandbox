@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 row.appendChild(cell2);
 
                 const cell3 = document.createElement('td');
+                // Create a hyperlink for the URL field
+                const link = document.createElement('a');
+                link.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
+                link.textContent = attributes.Website; // Display the URL text
+                link.target = '_blank'; // Open link in new tab
+                cell3.appendChild(link);
                 cell3.textContent = attributes.Website; // Replace 'Field3' with actual field name
                 row.appendChild(cell3);
 
