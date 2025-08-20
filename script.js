@@ -16,7 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Create table cells for each attribute
                 const cell1 = document.createElement('td');
-                cell1.textContent = attributes.Title; // Replace 'Field1' with actual field name
+                const link = document.createElement('a');
+                link.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
+                link.textContent = attributes.Title; // Display the URL text
+                link.target = '_blank'; // Open link in new tab
+                cell1.appendChild(link);
+                // cell1.textContent = attributes.Title; // Replace 'Field1' with actual field name
                 row.appendChild(cell1);
 
                 const cell2 = document.createElement('td');
