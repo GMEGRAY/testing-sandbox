@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Create table cells for each attribute
                 const cell1 = document.createElement('td');
-                const link = document.createElement('a');
-                link.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
-                link.textContent = attributes.Title; // Display the URL text
-                link.target = '_blank'; // Open link in new tab
-                cell1.appendChild(link);
+                const link1 = document.createElement('a');
+                link1.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
+                link1.textContent = attributes.Title; // Display the URL text
+                link1.target = '_blank'; // Open link in new tab
+                cell1.appendChild(link1);
                 // cell1.textContent = attributes.Title; // Replace 'Field1' with actual field name
                 row.appendChild(cell1);
 
@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const cell3 = document.createElement('td');
                 // Create a hyperlink for the URL field
-                const link = document.createElement('a');
-                link.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
-                link.textContent = attributes.Website; // Display the URL text
-                link.target = '_blank'; // Open link in new tab
-                cell3.appendChild(link);
+                const link2 = document.createElement('a');
+                link2.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
+                link2.textContent = attributes.Website; // Display the URL text
+                link2.target = '_blank'; // Open link in new tab
+                cell3.appendChild(link2);
                 // cell3.textContent = attributes.Website; // Replace 'Field3' with actual field name
                 row.appendChild(cell3);
 
