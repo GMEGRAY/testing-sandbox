@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 //const cell3 = document.createElement('td');
                 // Create a hyperlink for the URL field
                 //const link2 = document.createElement('a');
-                link2.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
-                link2.textContent = attributes.Website; // Display the URL text
-                link2.target = '_blank'; // Open link in new tab
+                //link2.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
+                //link2.textContent = attributes.Website; // Display the URL text
+                //link2.target = '_blank'; // Open link in new tab
                 //cell3.appendChild(link2);
                 // cell3.textContent = attributes.Website; // Replace 'Field3' with actual field name
                 //row.appendChild(cell3);
