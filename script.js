@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableBody = document.querySelector('#data-table tbody');
 
     // URL to the Esri GeoPlatform REST API endpoint
-    const url = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Funding_sources_feature_services_for_RSG/FeatureServer/0/query?f=json&where=1%3D1&outFields=Title,Description,Website&returnGeometry=false';
+    const url = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Funding_sources_feature_services_for_RSG/FeatureServer/0/query?f=json&where=1%3D1&outFields=Title,ShortDescription,Website&returnGeometry=false';
 
     // Fetch data from the Esri GeoPlatform
     fetch(url)
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 row.appendChild(cell1);
 
                 const cell2 = document.createElement('td');
-                cell2.textContent = attributes.Description; // Replace 'Field2' with actual field name
+                cell2.textContent = attributes.ShortDescription; // Replace 'Field2' with actual field name
                 row.appendChild(cell2);
 
                 const cell3 = document.createElement('td');
