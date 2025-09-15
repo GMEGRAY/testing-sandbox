@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const tableBody = document.querySelector('#data-table tbody');
+    const tableBody = document.querySelector('#datatable tbody');
 
     // URL to the Esri GeoPlatform REST API endpoint
     const url = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Funding_sources_feature_services_for_RSG/FeatureServer/0/query?f=json&where=1%3D1&outFields=Title,ShortDescription,Website&returnGeometry=false';
