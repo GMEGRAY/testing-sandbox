@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const tableBody = document.querySelector('#datatable tbody');
+$(document).ready(function() {
+    const tableBody = $('#data-table tbody');
 
     // URL to the Esri GeoPlatform REST API endpoint
     const url = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Funding_sources_feature_services_for_RSG/FeatureServer/0/query?f=json&where=1%3D1&outFields=Title,ShortDescription,Website&returnGeometry=false';
@@ -12,35 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
             features.forEach(feature => {
                 const attributes = feature.attributes;
-                const row = document.createElement('tr');
+                const row = $('<tr></tr>');
 
                 // Create table cells for each attribute
-                const cell1 = document.createElement('td');
-                const link1 = document.createElement('a');
-                link1.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
-                link1.textContent = attributes.Title; // Display the URL text
-                link1.target = '_blank'; // Open link in new tab
-                cell1.appendChild(link1);
-                // cell1.textContent = attributes.Title; // Replace 'Field1' with actual field name
-                row.appendChild(cell1);
+                const cell1 = $('<td></td>');
+                // Create a hyperlink with text from one field and URL from another
+                const link = $('<a></a>').attr('href', attributes.Website) 
+                                          .text(attributes.Title); 
+                cell1.append(link);
+                row.append(cell1);
 
-                const cell2 = document.createElement('td');
-                cell2.textContent = attributes.ShortDescription; // Replace 'Field2' with actual field name
-                row.appendChild(cell2);
-
-                //const cell3 = document.createElement('td');
-                // Create a hyperlink for the URL field
-                //const link2 = document.createElement('a');
-                //link2.href = attributes.Website; // Replace 'URLField' with the actual field name containing the URL
-                //link2.textContent = attributes.Website; // Display the URL text
-                //link2.target = '_blank'; // Open link in new tab
-                //cell3.appendChild(link2);
-                // cell3.textContent = attributes.Website; // Replace 'Field3' with actual field name
-                //row.appendChild(cell3);
+                const cell2 = $('<td></td>').text(attributes.ShortDescription); 
+                row.append(cell2);
 
                 // Append the row to the table body
-                tableBody.appendChild(row);
+                tableBody.append(row);
             });
+
+            // Initialize DataTables on the populated table
+            $('#data-table').DataTable();
         })
         .catch(error => console.error('Error fetching data:', error));
 });

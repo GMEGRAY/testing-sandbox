@@ -3,31 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esri GeoPlatform Data Table</title>
-    <link rel="stylesheet" href="datatables.min.css"> 
+    <title>Esri GeoPlatform Data Table with DataTables</title>
+    <!-- Include DataTables CSS -->
+    <link rel="stylesheet" href="/sites/all/libraries/js/datatables-1.10.16/datatables.min.css">
+
 </head>
 <body>
     <h1>Esri GeoPlatform Data Table</h1>
-    <table id="datatable">
+    <table id="data-table" class="display">
         <thead>
             <tr>
-                <th>Title</th>
+                <th>Funding Opportunity</th>
                 <th>Description</th>
-                 <!-- <th>Website</th>-->
                 <!-- Add more headers as needed -->
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>TEST TITLE</td>
-                <td>TEST DESCRIPTION</td>               
-            </tr>
             <!-- Data will be populated here -->
         </tbody>
     </table>
-    <script src="https://epa.gov/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
-    <script src="https://epa.gov/sites/all/libraries/js/datatables-1.10.23/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <!-- Include jQuery and DataTables JS -->
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+    <script src="/sites/all/libraries/js/datatables-1.10.23/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
