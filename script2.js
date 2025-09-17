@@ -17,12 +17,12 @@ $(document).ready(function() {
                 // Create table cells for each attribute
                 const cell1 = $('<td></td>');
                 // Create a hyperlink with text from one field and URL from another
-                const link = $('<a></a>').attr('href', attributes.Website) // Replace 'URLField' with the actual field name containing the URL
-                                          .text(attributes.Title); // Replace 'TextField' with the actual field name containing the text
+                const link = $('<a></a>').attr('href', attributes.Website) 
+                                          .text(attributes.Title); 
                 cell1.append(link);
                 row.append(cell1);
 
-                const cell2 = $('<td></td>').text(attributes.ShortDescription); // Replace 'Field2' with actual field name
+                const cell2 = $('<td></td>').text(attributes.ShortDescription); 
                 row.append(cell2);
 
                 // Append the row to the table body
