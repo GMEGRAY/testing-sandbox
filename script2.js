@@ -15,19 +15,15 @@ $(document).ready(function() {
                 const row = $('<tr></tr>');
 
                 // Create table cells for each attribute
-                const cell1 = $('<td></td>').text(attributes.Title); // Replace 'Field1' with actual field name
+                const cell1 = $('<td></td>');
+                // Create a hyperlink with text from one field and URL from another
+                const link = $('<a></a>').attr('href', attributes.Website) // Replace 'URLField' with the actual field name containing the URL
+                                          .text(attributes.Title); // Replace 'TextField' with the actual field name containing the text
+                cell1.append(link);
                 row.append(cell1);
 
                 const cell2 = $('<td></td>').text(attributes.ShortDescription); // Replace 'Field2' with actual field name
                 row.append(cell2);
-
-                const cell3 = $('<td></td>');
-                // Create a hyperlink with text from one field and URL from another
-                const link = $('<a></a>').attr('href', attributes.Website) // Replace 'URLField' with the actual field name containing the URL
-                                          .text(attributes.Title) // Replace 'TextField' with the actual field name containing the text
-                                          .attr('target', '_blank'); // Open link in new tab
-                cell3.append(link);
-                row.append(cell3);
 
                 // Append the row to the table body
                 tableBody.append(row);
